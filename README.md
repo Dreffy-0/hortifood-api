@@ -7,6 +7,8 @@ Este projeto é um back-end desenvolvido com NestJS e TypeORM para gerenciar cli
 - Frederico Augusto Ferreira Araújo Ferraz – UC23100834  
 - Gabriel Viana de Carvalho - UC23100545
 - Jeann Felipe Moreira Leite – UC23101904
+- Gabriel Lemes de França Ribeiro - UC23200354
+- Icaro vinnicius dias monteiro - UC23102651
 
 ---
 
