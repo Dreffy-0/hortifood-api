@@ -1,0 +1,90 @@
+### Criar cliente
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nome": "João da Silva",
+  "email": "joao@email.com",
+  "cpf": "12345678901",
+  "senha": "123456"
+}
+
+### Listar produtos
+GET http://localhost:3000/produtos
+
+### Cadastrar produto
+POST http://localhost:3000/produtos
+Content-Type: application/json
+
+{
+  "nome": "Café Orgânico",
+  "categoria": "Bebidas",
+  "preco": 15.5,
+  "estoque": 20,
+  "fornecedorId": 1
+}
+
+### Atualizar estoque
+PATCH http://localhost:3000/produtos/1/estoque
+Content-Type: application/json
+
+{
+  "estoque": 30
+}
+
+### Criar pedido
+POST http://localhost:3000/pedidos/pagar
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "formaPagamento": "Cartão",
+  "pedidoId": 1001,
+  "valorTotal": 15.5
+}
+
+### Avaliar produto
+POST http://localhost:3000/avaliacoes
+Content-Type: application/json
+
+{
+  "produtoId": 1,
+  "nota": 5,
+  "comentario": "Produto excelente!"
+}
+
+### Cadastrar fornecedor
+POST http://localhost:3000/fornecedores
+Content-Type: application/json
+
+{
+  "nomeFantasia": "Café Bom",
+  "razaoSocial": "Café Bom Ltda",
+  "cnpj": "12345678000100",
+  "email": "fornecedor@email.com",
+  "senha": "senha123",
+  "telefone": "61999999999",
+  "endereco": "Rua das Laranjeiras, 123"
+}
+
+### Cadastrar entregador
+POST http://localhost:3000/entregadores
+Content-Type: application/json
+
+{
+  "nome": "Carlos Entrega",
+  "email": "carlos@entrega.com",
+  "cpf": "98765432100",
+  "senha": "abc123",
+  "cnh": "12345678900",
+  "documentoVeiculo": "ABC-1234"
+}
+
+### Confirmar entrega
+PATCH http://localhost:3000/entregas/confirmar
+Content-Type: application/json
+
+{
+  "pedidoId": 1001,
+  "codigoConfirmacao": "123456"
+}
